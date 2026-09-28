@@ -676,7 +676,7 @@ function defaultSettings() {
       enabled: true,
       fromName: 'ICICE Imprest & Procurement System',
       fromAddress: 'notifications@icice.org',
-      recipients: { procurement: 'procurement@icicecentre.org', goni: 'goni@icice.org', jibo: 'jibo@icice.org', dg: 'dg@icice.org' },
+      recipients: { procurement: 'procurement@icicecentre.org', goni: 'rufai.goni@icicecentre.org', jibo: 'jibril.mj@icicecentre.org', dg: 'jameel.labaran@icicecentre.org' },
       events: Object.fromEntries(Object.keys(EMAIL_EVENTS).map(k => [k, true])),
       delivery: { mode: 'outbox', webhookUrl: '', emailjs: { publicKey: 'FIGXjIBa1oSrKODMX', serviceId: 'service_bmyvknh', templateId: 'template_4ikyd7h' } }
     }
@@ -693,16 +693,16 @@ function mkUser(name, email, pw, role, dept) {
 function seed() {
   const users = [
     mkUser('System Administrator', 'superadmin@icice.org', 'Admin@2026', 'super_admin', "DG's Office"),
-    mkUser('Director General', 'dg@icice.org', 'Dg@2026', 'dg', "DG's Office"),
-    mkUser('Malam Jibo', 'jibo@icice.org', 'Jibo@2026', 'finance', 'Finance Office'),
-    mkUser('Malam Goni', 'goni@icice.org', 'Goni@2026', 'goni', 'Facility & Procurement'),
-    mkUser('Procurement Officer', 'procurement@icice.org', 'Procure@2026', 'procurement', 'Facility & Procurement'),
+    mkUser('Director General', 'jameel.labaran@icicecentre.org', 'Dg@2026', 'dg', "DG's Office"),
+    mkUser('Jibo', 'jibril.mj@icicecentre.org', 'Jibo@2026', 'finance', 'Finance Office'),
+    mkUser('Goni', 'rufai.goni@icicecentre.org', 'Goni@2026', 'goni', 'Facility & Procurement'),
+    mkUser('Procurement Officer', 'procurement@icicecentre.org', 'Procure@2026', 'procurement', 'Facility & Procurement'),
     mkUser('Hajara Musa', 'care@icice.org', 'Head@2026', 'staff', 'ICICE Care'),
     mkUser('Yusuf Bello', 'facility@icice.org', 'Head@2026', 'staff', 'Facility & Procurement'),
     mkUser('Imam Sani', 'mosque@icice.org', 'Head@2026', 'staff', 'Community & Mosque Operations'),
     mkUser('Fatima Ali', 'education@icice.org', 'Head@2026', 'staff', 'Education & Training'),
     mkUser('Nafisa Idris', 'academy@icice.org', 'Head@2026', 'staff', 'Al-Noor Academy'),
-    mkUser('Bilal Ahmad', 'ict@icice.org', 'Head@2026', 'staff', 'ICT')
+    mkUser('Abdulrashid Dauda', 'ict@icice.org', 'Head@2026', 'staff', 'ICT')
   ];
   S = {
     v: 1, seededAt: nowISO(),
