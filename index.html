@@ -676,9 +676,9 @@ function defaultSettings() {
       enabled: true,
       fromName: 'ICICE Imprest & Procurement System',
       fromAddress: 'notifications@icice.org',
-      recipients: { procurement: 'procurement@icice.org', goni: 'goni@icice.org', jibo: 'jibo@icice.org', dg: 'dg@icice.org' },
+      recipients: { procurement: 'procurement@icicecentre.org', goni: 'goni@icice.org', jibo: 'jibo@icice.org', dg: 'dg@icice.org' },
       events: Object.fromEntries(Object.keys(EMAIL_EVENTS).map(k => [k, true])),
-      delivery: { mode: 'outbox', webhookUrl: '', emailjs: { publicKey: '', serviceId: '', templateId: '' } }
+      delivery: { mode: 'outbox', webhookUrl: '', emailjs: { publicKey: 'FIGXjIBa1oSrKODMX', serviceId: 'service_bmyvknh', templateId: 'template_4ikyd7h' } }
     }
   };
 }
